@@ -45,7 +45,6 @@ function Login() {
     showsignInBtn(false);
     showloadingBtn(true);
 
-    // Simulate API call
     setTimeout(() => {
       // Simulate successful login (you can change this logic)
       const mockUsers = [
@@ -146,7 +145,7 @@ function Login() {
                 role="status"
                 aria-hidden="true"
               /> 
-              Signing In...
+              Signing In..
             </Button>
           }
           
