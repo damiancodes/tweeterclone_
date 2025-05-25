@@ -1,16 +1,16 @@
-
+/* App.css */
 .App {
   text-align: center;
 }
 
-
+/* Split Screen Authentication Layout */
 .split-screen-auth {
   display: flex;
   min-height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-
+/* Left side - Image */
 .auth-image-side {
   flex: 1;
   position: relative;
@@ -58,7 +58,7 @@
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-
+/* Right side - Form */
 .auth-form-side {
   flex: 1;
   display: flex;
@@ -83,7 +83,7 @@
   text-align: center;
 }
 
-
+/* Modern Form Styling */
 .auth-form-container .form-label {
   font-weight: 600;
   color: #14171a;
@@ -111,7 +111,7 @@
   color: #8b98a5;
 }
 
-
+/* Modern Button Styling */
 .modern-button {
   background: #1d9bf0;
   border: none;
@@ -140,7 +140,7 @@
   box-shadow: 0 0 0 4px rgba(29, 155, 240, 0.2);
 }
 
-
+/* Auth Links */
 .auth-links {
   text-align: center;
   margin-top: 24px;
@@ -166,7 +166,7 @@
   color: #8b98a5;
 }
 
-
+/* Reset Password Specific */
 .reset-instruction {
   color: #536471;
   margin-bottom: 24px;
@@ -174,7 +174,7 @@
   line-height: 1.5;
 }
 
-
+/* Email Sent Container */
 .email-sent-container {
   padding: 20px 0;
 }
@@ -190,7 +190,7 @@
   line-height: 1.6;
 }
 
-
+/* Responsive Design */
 @media (max-width: 992px) {
   .split-screen-auth {
     flex-direction: column;
@@ -247,8 +247,7 @@
   
   .modern-input {
     padding: 14px 16px;
-    font-size: 16px; 
-    
+    font-size: 16px; /* Prevent zoom on iOS */
   }
   
   .modern-button {
@@ -274,7 +273,7 @@
   }
 }
 
-
+/* Loading Animation */
 @keyframes slideUp {
   from {
     opacity: 0;
@@ -290,24 +289,306 @@
   animation: slideUp 0.5s ease-out;
 }
 
-
+/* Custom Spinner Color */
 .spinner-border {
   color: rgba(255, 255, 255, 0.8);
 }
 
-
+/* Button States */
 .modern-button:active {
   transform: translateY(0);
 }
 
-
+/* Focus styles for accessibility */
 .modern-input:focus,
 .modern-button:focus,
 .auth-link:focus {
   outline: none;
 }
 
-
+/* Smooth transitions */
 * {
   transition: all 0.2s ease;
+}
+
+/* ===== HOME PAGE STYLES ===== */
+
+/* Navigation */
+.modern-navbar {
+  background: linear-gradient(135deg, #1d9bf0 0%, #1a8cd8 100%);
+  box-shadow: 0 2px 20px rgba(29, 155, 240, 0.15);
+  padding: 1rem 0;
+}
+
+.navbar-brand-modern {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white !important;
+  text-decoration: none;
+}
+
+.welcome-text {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: 500;
+  margin: 0;
+}
+
+.logout-btn {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-1px);
+}
+
+/* Home Background */
+.home-background {
+  background: linear-gradient(135deg, #f7f9fa 0%, #e8f4fd 100%);
+  min-height: calc(100vh - 80px);
+}
+
+/* Welcome Card */
+.welcome-card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(29, 155, 240, 0.1);
+  background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+}
+
+.welcome-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.welcome-title {
+  color: #14171a;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.welcome-subtitle {
+  color: #536471;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.status-badge {
+  font-size: 1rem;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* Info Cards */
+.info-card, .users-card, .features-card, .tools-card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  background: white;
+  overflow: hidden;
+}
+
+.card-header-modern {
+  background: linear-gradient(135deg, #1d9bf0 0%, #1a8cd8 100%);
+  border: none;
+  color: white;
+  padding: 1.5rem;
+}
+
+.card-header-modern h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* Info Items */
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f1f3f4;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.info-item strong {
+  color: #14171a;
+  font-weight: 600;
+}
+
+.info-item span {
+  color: #536471;
+  font-weight: 500;
+}
+
+/* User Item Cards */
+.user-item-card {
+  border: 1px solid #e1e8ed;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.user-item-card:hover {
+  border-color: #1d9bf0;
+  box-shadow: 0 4px 15px rgba(29, 155, 240, 0.1);
+  transform: translateY(-2px);
+}
+
+.user-item-card.current-user {
+  border-color: #1d9bf0;
+  background: linear-gradient(135deg, #f8fbff 0%, #e8f4fd 100%);
+}
+
+.user-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1d9bf0 0%, #1a8cd8 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* Feature List */
+.feature-list {
+  padding: 0;
+}
+
+.feature-item {
+  padding: 12px 0;
+  color: #536471;
+  font-weight: 500;
+  border-bottom: 1px solid #f1f3f4;
+  transition: color 0.2s ease;
+}
+
+.feature-item:last-child {
+  border-bottom: none;
+}
+
+.feature-item:hover {
+  color: #1d9bf0;
+}
+
+/* Tool Buttons */
+.tool-btn {
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.tool-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design for Home */
+@media (max-width: 768px) {
+  .welcome-title {
+    font-size: 2rem;
+  }
+  
+  .welcome-subtitle {
+    font-size: 1rem;
+  }
+  
+  .welcome-icon {
+    font-size: 3rem;
+  }
+  
+  .navbar-brand-modern {
+    font-size: 1.3rem;
+  }
+  
+  .welcome-text {
+    font-size: 0.9rem;
+  }
+  
+  .info-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  
+  .card-header-modern {
+    padding: 1rem;
+  }
+  
+  .card-header-modern h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .home-background {
+    min-height: calc(100vh - 70px);
+  }
+  
+  .tool-btn {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+/* Loading Spinner for Home */
+.home-background .spinner-border {
+  width: 3rem;
+  height: 3rem;
+  border-width: 0.3em;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.welcome-card,
+.info-card,
+.users-card,
+.features-card,
+.tools-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.users-card {
+  animation-delay: 0.1s;
+}
+
+.features-card {
+  animation-delay: 0.2s;
+}
+
+.tools-card {
+  animation-delay: 0.3s;
 }
