@@ -396,7 +396,7 @@ function Register() {
           
           <div className='auth-links'>
             <Link to='/' className='auth-link'>
-              Already have an account? Sign In
+              Already have an account? Sign In please
             </Link>
           </div>
         </div>
