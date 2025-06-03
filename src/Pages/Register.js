@@ -63,34 +63,34 @@ function Register() {
 
   // Validation functions
   const validateFullName = (name) => {
-    if (!name.trim()) return { valid: false, message: "Full name is required" };
+    if (!name.trim()) return { valid: false, message: "" };
     if (name.trim().length < 2) return { valid: false, message: "Full name must be at least 2 characters" };
     return { valid: true };
   };
 
   const validateUsername = (username) => {
-    if (!username) return { valid: false, message: "Username is required" };
-    if (username.length < 3) return { valid: false, message: "Username must be at least 3 characters long" };
-    if (username.length > 20) return { valid: false, message: "Username must be less than 20 characters" };
-    if (!/^[a-zA-Z0-9_-]+$/.test(username)) return { valid: false, message: "Username can only contain letters, numbers, underscores, and hyphens" };
+    if (!username) return { valid: false, message: "" };
+    if (username.length < 3) return { valid: false, message: "" };
+    if (username.length > 20) return { valid: false, message: "" };
+    if (!/^[a-zA-Z0-9_-]+$/.test(username)) return { valid: false, message: "" };
     return { valid: true };
   };
 
   const validateEmail = (email) => {
     if (!email) return { valid: false, message: "Email is required" };
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) return { valid: false, message: "Please enter a valid email address" };
+    if (!emailRegex.test(email)) return { valid: false, message: "" };
     return { valid: true };
   };
 
   const validatePassword = (password) => {
-    if (!password) return { valid: false, message: "Password is required" };
-    if (password.length < 6) return { valid: false, message: "Password must be at least 6 characters long" };
+    if (!password) return { valid: false, message: "" };
+    if (password.length < 6) return { valid: false, message: "" };
     return { valid: true };
   };
 
   const validateConfirmPassword = (password, confirmPassword) => {
-    if (!confirmPassword) return { valid: false, message: "Please confirm your password" };
+    if (!confirmPassword) return { valid: false, message: "" };
     if (password !== confirmPassword) return { valid: false, message: "Passwords do not match" };
     return { valid: true };
   };
@@ -271,13 +271,12 @@ function Register() {
       </div>
       <div className='auth-form-side'>
         <div className="auth-form-container">
-          <h1>Sign Up</h1>
+          <h1 className="mb-4">Sign Up</h1>
           
-          <Form.Group className="mb-3" controlId="registerFullName">
+          <Form.Group className="mb-4" controlId="registerFullName">
             <Form.Label>Full Name</Form.Label>
             <Form.Control 
               type="text" 
-              placeholder="Enter your full name" 
               ref={fullName}
               required
               className="modern-input"
@@ -289,11 +288,10 @@ function Register() {
             </Form.Text>
           </Form.Group>
           
-          <Form.Group className="mb-3" controlId="registerUsername">
+          <Form.Group className="mb-4" controlId="registerUsername">
             <Form.Label>Username</Form.Label>
             <Form.Control 
               type="text" 
-              placeholder="Choose a username" 
               ref={username}
               required
               className="modern-input"
@@ -305,11 +303,10 @@ function Register() {
             </Form.Text>
           </Form.Group>
           
-          <Form.Group className="mb-3" controlId="registerEmail">
+          <Form.Group className="mb-4" controlId="registerEmail">
             <Form.Label>Email address</Form.Label>
             <Form.Control 
               type="email" 
-              placeholder="name@example.com" 
               ref={email}
               required
               className="modern-input"
@@ -320,11 +317,10 @@ function Register() {
             </Form.Text>
           </Form.Group>
           
-          <Form.Group className="mb-3" controlId="registerPassword">
+          <Form.Group className="mb-4" controlId="registerPassword">
             <Form.Label>Password</Form.Label>
             <Form.Control 
               type="password" 
-              placeholder="Create a password (min 6 characters)" 
               ref={password}
               required
               className="modern-input"
@@ -349,11 +345,10 @@ function Register() {
             </Form.Text>
           </Form.Group>
           
-          <Form.Group className="mb-4" controlId="registerConfirmPassword">
+          <Form.Group className="mb-5" controlId="registerConfirmPassword">
             <Form.Label>Confirm Password</Form.Label>
             <Form.Control 
               type="password" 
-              placeholder="Confirm your password" 
               ref={confirmPassword}
               required
               className="modern-input"
@@ -368,7 +363,7 @@ function Register() {
             <Button 
               variant="primary" 
               onClick={signUpUser} 
-              className="w-100 mb-3 modern-button"
+              className="w-100 mb-4 modern-button"
               size="lg"
               aria-label="Create your account"
             >
@@ -379,7 +374,7 @@ function Register() {
             <Button 
               variant="primary" 
               disabled 
-              className="w-100 mb-3 modern-button"
+              className="w-100 mb-4 modern-button"
               size="lg"
               aria-label="Creating account, please wait"
             >
